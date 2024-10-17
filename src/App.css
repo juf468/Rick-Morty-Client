@@ -1,0 +1,57 @@
+/* app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  max-width: 1280px; /* Mantener el ancho máximo */
+  margin: 0 auto; /* Centrar el contenido */
+  padding: 2rem; /* Espaciado alrededor del contenido */
+  text-align: center; /* Centrar texto */
+}
+
+/* Estilos para el logo */
+.logo {
+  height: 6em; /* Altura del logo */
+  padding: 1.5em; /* Espaciado interno del logo */
+  will-change: filter; /* Mejora el rendimiento al cambiar el filtro */
+  transition: filter 300ms; /* Transición suave para el filtro */
+}
+
+/* Efectos de hover para el logo */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Sombra al pasar el ratón */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(
+    0 0 2em #61dafbaa
+  ); /* Sombra específica para el logo de React */
+}
+
+/* Animación de rotación del logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animación de logo en enlaces */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear; /* Rotación infinita */
+  }
+}
+
+/* Estilos para tarjetas */
+.card {
+  @apply p-8; /* Espaciado en Tailwind */
+}
+
+/* Estilos para textos de documentación */
+.read-the-docs {
+  @apply text-gray-600; /* Utiliza Tailwind para el color */
+}
