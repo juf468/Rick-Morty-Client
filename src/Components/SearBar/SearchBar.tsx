@@ -30,7 +30,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
         onKeyDown={handleKeyDown}
       />
       <button
-        className="z-[100] absolute right-4 bg-customDarkBlue border-4 border-white rounded-full w-14 h-14 p-2 focus:outline-none text-20 cursor-pointer transition-transform ease-in-out hover:scale-110 duration-200"
+        className="z-40 absolute right-4 bg-customDarkBlue border-4 border-white rounded-full w-14 h-14 p-2 focus:outline-none text-20 cursor-pointer transition-transform ease-in-out hover:scale-110 duration-200"
         onClick={() => {
           // Convierte el id a número antes de llamar a onSearch
           const numericId = parseInt(id);

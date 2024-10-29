@@ -59,24 +59,24 @@ const NavBar: React.FC<NavBarProps> = (props) => {
             <X className="w-7 h-7 md:w-9 md:h-9"/>
           </button>
         </div>
-        <nav className="flex flex-col p-5 space-y-4">
-          <Link to="/about" className="text-xl font-semibold" onClick={toggleMenu}>
-            About
+        <nav className="flex flex-col p-5 space-y-4 items-center">
+          <Link to="/about" className="relative h-[40px] pb-2 w-[20%]" onClick={toggleMenu}>
+            <p className="text-xl md:text-2xl font-bold py-1 absolute right-0 left-0 hover:border-b-2 hover:md:border-b-[3px] hover:border-[#000] hover:duration-100"> About</p>
           </Link>
-          <Link to="/home" className="text-xl font-semibold" onClick={toggleMenu}>
-            Home
+          <Link to="/home" className="relative h-[40px] w-[20%]" onClick={toggleMenu}>
+            <p className="text-xl md:text-2xl font-bold py-1 absolute right-0 left-0 top-3.5 hover:border-b-2 hover:md:border-b-[3px] hover:border-[#000] hover:duration-100">Home</p>
           </Link>
-          <button onClick={() => { props.handleLogout(); toggleMenu(); }} className="text-xl font-semibold">
-            Logout
+          <button onClick={() => { props.handleLogout(); toggleMenu(); }} className="relative h-[40px] w-[24%]">
+            <p className="text-xl md:text-2xl font-bold py-1 absolute right-0 left-0 top-8 hover:border-b-2 hover:md:border-b-[3px] hover:border-[#000] hover:duration-100">Logout</p>
           </button>
-          <Link to="/favorites" className="text-xl font-semibold" onClick={toggleMenu}>
-            Favorites
+          <Link to="/favorites" className="relative h-[40px] w-[28%]" onClick={toggleMenu}>
+            <p className="text-xl md:text-2xl font-bold py-1 absolute right-0 left-0 top-12 hover:border-b-2 hover:md:border-b-[3px] hover:border-[#000] hover:duration-100">Favorites</p>
           </Link>
-          <button onClick={() => { handleRandom(); toggleMenu(); }} className="text-xl font-semibold">
-            Random
-          </button>
         </nav>
       </div>
+      <button onClick={handleRandom} className="h-[68px] mt-2 lg:hidden my-0 mr-2 p-3 bg-colorButtonLogin border-4 border-black border-solid rounded-xl no-underline text-black font-bold text-[23px] cursor-pointer hover:bg-colorBorderForm hover:scale-105 transition-transform duration-200 ease-in-out">
+        Random
+      </button>
     </div>
   );
 };
