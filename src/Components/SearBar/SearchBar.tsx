@@ -21,7 +21,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
   };
 
   return (
-    <div className="w-1/3 flex p-6 items-center relative justify-end">
+    <div className="w-[90%] mx-auto lg:mx-0 lg:w-1/3 flex p-6 items-center relative lg:justify-end">
       <input
         className="w-full h-10 rounded-lg border-solid border-4 border-white bg-transparent text-lg py-2 px-4 font-bold placeholder:text-white focus:outline-none text-white"
         type="search"
