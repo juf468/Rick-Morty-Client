@@ -21,7 +21,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
   };
 
   return (
-    <div className="w-1/3 flex p-6 items-center relative justify-end">
+    <div className="w-[90%] mx-auto lg:mx-0 lg:w-1/3 flex p-6 items-center relative lg:justify-end">
       <input
         className="w-full h-10 rounded-lg border-solid border-4 border-white bg-transparent text-lg py-2 px-4 font-bold placeholder:text-white focus:outline-none text-white"
         type="search"
@@ -30,7 +30,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
         onKeyDown={handleKeyDown}
       />
       <button
-        className="z-[100] absolute right-4 bg-customDarkBlue border-4 border-white rounded-full w-14 h-14 p-2 focus:outline-none text-20 cursor-pointer transition-transform ease-in-out hover:scale-110 duration-200"
+        className="z-40 absolute right-4 bg-customDarkBlue border-4 border-white rounded-full w-14 h-14 p-2 focus:outline-none text-20 cursor-pointer transition-transform ease-in-out hover:scale-110 duration-200"
         onClick={() => {
           // Convierte el id a número antes de llamar a onSearch
           const numericId = parseInt(id);
